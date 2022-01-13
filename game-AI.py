@@ -21,13 +21,13 @@ def dfs(v):
 	return a[v]
 
 dfs(n)
-field = list(map(int, input("Состояние поля: ").split(" ")))#4 12 14 7 15 2
+field = list(map(int, input("Состояние поля: ").split(" ")))#4 12 1 7 15 2 5 20
 xf = []
 for i in range(len(field)):
 	xf1 = 0
 	for j in range(len(field)):
 		if j != i:
-			xf1^=a[j]
+			xf1^=a[field[j]]
 	xf.append(xf1)
 for i in range(len(field)):
 	for j in cases[field[i]]:
